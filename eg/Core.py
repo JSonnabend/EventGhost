@@ -113,8 +113,10 @@ eg.ValueChangedEvent, eg.EVT_VALUE_CHANGED = eg.CommandEvent()
 eg.pyCrustFrame = None
 eg.dummyAsyncoreDispatcher = None
 
-from eg.WinApi.Dynamic import GetCurrentProcessId  # NOQA
-eg.processId = GetCurrentProcessId()
+#JS 2023-03-05
+# from eg.winapi.Dynamic import GetCurrentProcessId  # NOQA
+# eg.processId = GetCurrentProcessId()
+eg.processId = os.getpid()
 Init.InitPil()
 
 class Exception(Exception):

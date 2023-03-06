@@ -20,7 +20,7 @@
 import sys
 import os
 import site
-import winreg
+#!!JS import winreg
 from types import ModuleType
 
 

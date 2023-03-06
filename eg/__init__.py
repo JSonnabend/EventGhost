@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License along
 # with EventGhost. If not, see <http://www.gnu.org/licenses/>.
 
-import stackless
+# import stackless
 import sys
 
 # the following three import are needed if we are running from source and the

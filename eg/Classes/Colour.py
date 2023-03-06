@@ -40,8 +40,8 @@ class Colour:
 
     These might get configurable in the future.
     """
-    windowText = wx.SystemSettings_GetColour(wx.SYS_COLOUR_WINDOWTEXT).Get()
-    windowBackground = wx.SystemSettings_GetColour(wx.SYS_COLOUR_WINDOW).Get()
+    windowText = wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOWTEXT)
+    windowBackground = wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW)
     treeItem = windowText
     pluginError = (255, 0, 0)
     errorText = (0, 0, 0)

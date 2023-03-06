@@ -138,7 +138,8 @@ class Log(object):
             self.PrintDebugNotice("----------------------------------------")
 
         # redirect all wxPython error messages to our log
-        class MyLog(wx.PyLog):
+        #JS
+        class MyLog(wx.Log):
             def DoLog(self, level, msg, dummyTimestamp):
                 if (level >= 6):
                     return
