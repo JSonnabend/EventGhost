@@ -24,9 +24,9 @@ from os.path import join
 import eg
 from eg.WinApi.Utils import BringHwndToFront
 
-ID_SHOW = wx.NewId()
-ID_HIDE = wx.NewId()
-ID_EXIT = wx.NewId()
+ID_SHOW = wx.NewIdRef(count=1)
+ID_HIDE = wx.NewIdRef(count=1)
+ID_EXIT = wx.NewIdRef(count=1)
 
 class TaskBarIcon(wx.adv.TaskBarIcon):
     def __init__(self, show):

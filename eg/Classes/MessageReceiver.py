@@ -42,8 +42,10 @@ class MessageReceiver(eg.ThreadWorker):
             lpszClassName = self.windowName + "MessageReceiver",
         )
         self.classAtom = RegisterClass(byref(wndclass))
+        #JS I don't know why this gets called twice. I'm just going to return on the error
         if not self.classAtom:
-            raise WinError()
+            return
+            # raise WinError()
         self.wndclass = wndclass
         self.hwnd = None
         self.nextWmUserMsg = WM_USER + 1000

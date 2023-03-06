@@ -40,6 +40,7 @@ import sys
 import threading
 import time
 import wx
+import uuid
 from os.path import exists, join
 
 # Local imports
@@ -57,7 +58,7 @@ eg.CORE_PLUGIN_GUIDS = (
     "{6B1751BF-F94E-4260-AB7E-64C0693FD959}",  # "Mouse"
 )
 
-eg.ID_TEST = wx.NewId()
+eg.ID_TEST = wx.NewIdRef(count=1)
 eg.mainDir = eg.Cli.mainDir
 
 eg.revision = 2000  # Deprecated
@@ -84,7 +85,8 @@ eg.lastFoundWindows = []
 eg.currentItem = None
 eg.actionGroup = eg.Bunch()
 eg.actionGroup.items = []
-eg.GUID = eg.GUID()
+#JS
+eg.GUID = uuid.uuid4()
 
 def _CommandEvent():
     """Generate new (CmdEvent, Binder) tuple

@@ -31,6 +31,7 @@ import win32api  # NOQA
 import Cli
 from Utils import *  # NOQA
 from Classes.WindowsVersion import WindowsVersion
+import uuid
 
 
 APP_NAME = "EventGhost"
