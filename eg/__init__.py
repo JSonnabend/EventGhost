@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License along
 # with EventGhost. If not, see <http://www.gnu.org/licenses/>.
 
-# import stackless
+import stackless
 import sys
 
 # the following three import are needed if we are running from source and the
@@ -90,8 +90,9 @@ class DynamicModule(object):
                 eg.Init.ImportAll()
             except:
                 eg.PrintDebugNotice(sys.exc_info()[1])
-        eg.Tasklet(eg.app.MainLoop)().run()
-        stackless.run()
+        eg.app.MainLoop
+        # eg.Tasklet(eg.app.MainLoop)().run()
+        # stackless.run()
 
 
 eg = DynamicModule()
