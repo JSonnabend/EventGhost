@@ -40,7 +40,7 @@ class StatusBar(wx.StatusBar):
 
         checkBox = wx.CheckBox(self, -1, eg.text.MainFrame.onlyLogAssigned)
         self.checkBox = checkBox
-        colour = wx.SystemSettings_GetColour(wx.SYS_COLOUR_MENUBAR)
+        colour = wx.SystemSettings.GetColour(wx.SYS_COLOUR_MENUBAR)
         checkBox.SetBackgroundColour(colour)
         self.checkBoxColour = checkBox.GetForegroundColour()
         checkBox.SetValue(eg.config.onlyLogAssigned)

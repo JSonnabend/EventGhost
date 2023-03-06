@@ -96,5 +96,10 @@ class Colour:
         """
         Returns HSV (Hue, Saturation, Value) from a RGB colour tuple.
         """
-        red, green, blue = colour
+        try:
+            red, green, blue = colour
+        except:
+            red = 0
+            green = 0
+            blue = 0
         return colorsys.rgb_to_hsv(red / 255.0, green / 255.0, blue / 255.0)

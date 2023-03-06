@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License along
 # with EventGhost. If not, see <http://www.gnu.org/licenses/>.
 
-import Cli
+import eg.Cli
 
 import platform
 from collections import OrderedDict
@@ -354,5 +354,6 @@ class WindowsVersion:
         """
         return _compare('==', "10")
 
-if Cli.args.isMain:
+#JS
+if eg.Cli.args.isMain:
     WindowsVersion = WindowsVersion()

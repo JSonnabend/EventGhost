@@ -475,7 +475,7 @@ class MainFrame(wx.Frame):
         Append("Paste")
         Append("Delete")
         menu.AppendSeparator()
-        menu.AppendMenu(wx.ID_ANY, text=text.ExpandCollapseMenu, submenu=subm)
+        # menu.Append(wx.ID_ANY, text='expand/collapse', submenu=subm)
         menu.AppendSeparator()
         Append("AddPlugin", image=ADD_PLUGIN_ICON)
         Append("AddFolder", image=ADD_FOLDER_ICON)
